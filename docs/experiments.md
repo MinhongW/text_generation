@@ -1,5 +1,7 @@
 # Experiments
 
+Reference paper: https://aclanthology.org/2021.acl-long.115.pdf
+
 ## Naive representation + T5-small
 
 batch_size = 4
