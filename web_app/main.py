@@ -45,7 +45,11 @@ def load_css():
             background-color: black;
         }
         .column-content-grey {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #D8D8D8;
+            padding-bottom: 20px;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -77,8 +81,8 @@ def introduction_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>Automatically Generated Table Summaries:</b> T-Gen automatically generate table summaries, 
-                        obviating the requirement for manual interpretation and description.
+                            <b>Automatically Generated Table Summaries:</b> T-Gen automatically generate 
+                            table summaries, obviating the requirement for manual interpretation and description.
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5,9.5])
@@ -87,8 +91,8 @@ def introduction_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>In-house Large Language Model:</b> T-Gen benefits from the state-of-the-art advancements 
-                        in natural language processing
+                            <b>In-house Large Language Model:</b> T-Gen benefits from the state-of-the-art 
+                            advancements in natural language processing
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5,9.5])
@@ -97,8 +101,8 @@ def introduction_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>Streamlined Model Performance Analysis:</b> Integrate with AutoDoc, enabling users quickly 
-                        and effortlessly documentation experience.
+                            <b>Streamlined Model Performance Analysis:</b> Integrate with AutoDoc, enabling users 
+                            quickly and effortlessly documentation experience.
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5,9.5])
@@ -107,8 +111,8 @@ def introduction_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>Customizable and Adaptable:</b> T-Gen can be further developed for other specific domains 
-                        or datasets
+                            <b>Customizable and Adaptable:</b> T-Gen can be further developed for other specific domains 
+                            or datasets
                         </div>
                         """, unsafe_allow_html=True)
 
@@ -149,7 +153,7 @@ def t5_model_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                    <b>Open-source</b> language model developed by Google Research Lab
+                            <b>Open-source</b> language model developed by Google Research Lab
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -158,7 +162,7 @@ def t5_model_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        Trained on a <b>750 GB</b> dataset of clean natural English free text
+                            Trained on a <b>750 GB</b> dataset of clean natural English free text
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -167,7 +171,7 @@ def t5_model_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        An encoder-decoder model pre-trained on a multi-task mixture of tasks
+                            An encoder-decoder model pre-trained on a multi-task mixture of tasks
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -176,7 +180,7 @@ def t5_model_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        T5 provides 5 language models of multiple sizes, from 60M parameters to 11B
+                            T5 provides 5 language models of multiple sizes, from 60M parameters to 11B
                         </div>
                         """, unsafe_allow_html=True)
 
@@ -188,7 +192,8 @@ def model_development_section():
         st.markdown("""
                     <div class="section-header-grey">Model Development</div>
                     <div class="column-content-grey">
-                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_pipeline.png?raw=true" width="1500"/>
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_pipeline.png?raw=true" 
+                        width="1500"/>
                     </div>
                     """, unsafe_allow_html=True)
 
@@ -207,9 +212,9 @@ def model_section():
         col_model_dir, col_input_format = st.columns([5,5])
         with col_model_dir:
             model_dir = st.radio("Model name:",
-                                     ("ca-rnd-language-model-small",
-                                      "ca-rnd-language-model-medium",
-                                      "ca-rnd-language-model-large"),
+                                 ("ca-rnd-language-model-small",
+                                  "ca-rnd-language-model-medium",
+                                  "ca-rnd-language-model-large"),
                                  )
         with col_input_format:
             input_format = st.radio("Choose an input format", ["Text", "Word document"])
@@ -266,7 +271,8 @@ def result_section():
         st.markdown("""
                     <div class="section-header-grey">T-Gen Performance</div>
                     <div class="column-content-grey">
-                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_results.png?raw=true" width="850"/>
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_results.png?raw=true" 
+                        width="850"/>
                     </div>
                     """, unsafe_allow_html=True)
 
@@ -283,7 +289,7 @@ def result_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>ROUGE</b> score measures the overlap of n-grams between two texts.
+                            <b>ROUGE</b> score measures the overlap of n-grams between two texts.
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -292,8 +298,8 @@ def result_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        The baseline model achieved ROUGE-L as 29.70 by fine-tuning T5 model to generate scientific 
-                        numeric tables' descriptions
+                            The baseline model achieved ROUGE-L as 29.70 by fine-tuning T5 model to generate scientific 
+                            numeric tables' descriptions
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -302,8 +308,8 @@ def result_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        Our model achieved <b>higher</b> ROUGE score (47.40) for the task of generating descriptions 
-                        for tables describing model performance
+                            Our model achieved <b>higher</b> ROUGE score (47.40) for the task of generating descriptions 
+                            for tables describing model performance
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
@@ -312,7 +318,7 @@ def result_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        The performance could potentially be increased by adapting bigger models
+                            The performance could potentially be increased by adapting bigger models
                         </div>
                         """, unsafe_allow_html=True)
 
