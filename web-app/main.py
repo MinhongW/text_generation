@@ -126,7 +126,7 @@ def introduction_and_methodology_section():
             </style>
             <div class="section-header-grey">State-of-the-art</div>
             <div class="column1-content">
-                <img src="https://github.com/MinhongW/text_generation/blob/main/imgs/fig_transformers_ver4_01.png?raw=true" width="850"/>
+                <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_01.png?raw=true" width="850"/>
             </div>
             """, unsafe_allow_html=True)
 
@@ -144,7 +144,7 @@ def t5_model_section():
                     </style>
                     <div class="section-header-grey">Architecture</div>
                     <div class="column1-content">
-                        <img src="https://github.com/MinhongW/text_generation/blob/main/imgs/fig_transformers_ver4.1_02.png?raw=true" width="850"/>
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_02.png?raw=true" width="850"/>
                     </div>
                     """, unsafe_allow_html=True)
 
@@ -206,7 +206,7 @@ def model_development_section():
                             </style>
                             <div class="section-header-grey">Model Development</div>
                             <div class="column1-content">
-                                <img src="https://github.com/MinhongW/text_generation/blob/main/imgs/fig_pipeline_ver4.png?raw=true" width="1500"/>
+                                <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_pipeline.png?raw=true" width="1500"/>
                             </div>
                             """, unsafe_allow_html=True)
 
@@ -296,7 +296,7 @@ def result_section():
                     </style>
                     <div class="section-header-grey">AutoGen Performance</div>
                     <div class="column1-content">
-                        <img src="https://github.com/MinhongW/text_generation/blob/main/imgs/fig_results_ver04.png?raw=true" width="850"/>
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_results.png?raw=true" width="850"/>
                     </div>
                     """, unsafe_allow_html=True)
 
