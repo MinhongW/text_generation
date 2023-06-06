@@ -13,44 +13,39 @@ import time
 def load_css():
     st.markdown("""
         <style>
-        .paragraph-spacing p {
-            margin-bottom: 10px;
-        }
         .big-font {
             font-size:24px !important;
             /* line-height: 3; */
             margin-bottom: 40px;
-        }
-        .big-font-single {
-            font-size:20px !important;
-            padding: 10px;
         }
         .big-font-right {
             font-size:20px !important;
             text-align:right !important;
         }
         .section-header-black {
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        color: white;
-        background-color: black;
-        
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            background-color: black;        
         }
         .section-header-grey {
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        color: black;
-        background-color: #EEEEEE;
-        padding: 10px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+            background-color: #D8D8D8;
+            padding: 10px;
         }
         .section-subheader-black {
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-        background-color: black;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            background-color: black;
+        }
+        .column-content-grey {
+            background-color: #D8D8D8;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -66,17 +61,16 @@ def cached_load_tokenizer(model_dir):
     return load_tokenizer(model_dir)
 
 
-def introduction_and_methodology_section():
+def introduction_section():
     # Introduction and Methodology
     col1, col2 = st.columns([5,5])
     # Introduction section
     with col1:
         load_css()
-        st.markdown('<div class="section-header-black">Welcome to AutoGen</div>', unsafe_allow_html=True)
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
+        st.markdown('<div class="section-header-black">Unlocking the Story Within Tables</div>', unsafe_allow_html=True)
+        st.markdown("""
+                    <br><br><br>
+                    """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5,9.5])
         with col_icon:
             st.image("icons/icon-easy.png", use_column_width=True)
@@ -93,7 +87,8 @@ def introduction_and_methodology_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>In-house Language Model:</b> T-Gen benefits from the state-of-the-art advancements in natural language processing
+                        <b>In-house Large Language Model:</b> T-Gen benefits from the state-of-the-art advancements 
+                        in natural language processing
                         </div>
                         """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5,9.5])
@@ -102,7 +97,7 @@ def introduction_and_methodology_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>Streamlined Model Performance Analysis:</b> Integrate with AutoDoc enabling users quickly 
+                        <b>Streamlined Model Performance Analysis:</b> Integrate with AutoDoc, enabling users quickly 
                         and effortlessly documentation experience.
                         </div>
                         """, unsafe_allow_html=True)
@@ -112,21 +107,18 @@ def introduction_and_methodology_section():
         with col_text:
             st.markdown("""
                         <div class="big-font">
-                        <b>Customizable and Adaptable:</b> T-Gen can be further developed for other specific domains or datasets
+                        <b>Customizable and Adaptable:</b> T-Gen can be further developed for other specific domains 
+                        or datasets
                         </div>
                         """, unsafe_allow_html=True)
 
     with col2:
         load_css()
         st.markdown("""
-            <style>
-            .column1-content {
-                background-color: #EEEEEE;
-            }
-            </style>
             <div class="section-header-grey">State-of-the-art</div>
-            <div class="column1-content">
-                <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_01.png?raw=true" width="850"/>
+            <div class="column-content-grey">
+                <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_01.png?raw=true"
+                 width="850"/>
             </div>
             """, unsafe_allow_html=True)
 
@@ -137,14 +129,10 @@ def t5_model_section():
     with col1:
         load_css()
         st.markdown("""
-                    <style>
-                    .column1-content {
-                        background-color: #696969;
-                    }
-                    </style>
                     <div class="section-header-grey">Architecture</div>
-                    <div class="column1-content">
-                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_02.png?raw=true" width="850"/>
+                    <div class="column-content-grey">
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_transformers_02.png?raw=true" 
+                        width="850"/>
                     </div>
                     """, unsafe_allow_html=True)
 
@@ -152,10 +140,9 @@ def t5_model_section():
         load_css()
         st.markdown('<div class="section-header-black">T5: Text-To-Text Transfer Transformer</div>',
                     unsafe_allow_html=True)
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
+        st.markdown("""
+                    <br><br><br>
+                    """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
         with col_icon:
             st.image("icons/icon-open-source.png", use_column_width=True)
@@ -199,21 +186,16 @@ def model_development_section():
     with col1:
         load_css()
         st.markdown("""
-                            <style>
-                            .column1-content {
-                                background-color: #EEEEEE;
-                            }
-                            </style>
-                            <div class="section-header-grey">Model Development</div>
-                            <div class="column1-content">
-                                <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_pipeline.png?raw=true" width="1500"/>
-                            </div>
-                            """, unsafe_allow_html=True)
+                    <div class="section-header-grey">Model Development</div>
+                    <div class="column-content-grey">
+                        <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_pipeline.png?raw=true" width="1500"/>
+                    </div>
+                    """, unsafe_allow_html=True)
 
 
 def model_section():
     # Model section
-    st.markdown('<div class="section-header-black">AutoGen</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header-black">T-Gen</div>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
 
     model_output = None
@@ -239,12 +221,8 @@ def model_section():
             model = cached_load_model(model_dir)
             tokenizer = cached_load_tokenizer(model_dir)
 
-            # input_format = st.radio("Choose an input format", ["Text", "Word document"])
-
             if input_format == "Text":
-
                 user_input = st.text_area("Input Text", "", height=200)
-
                 if user_input:
                     caption, df, model_input = parse_input_string(user_input)
                     if df is not None:
@@ -254,7 +232,6 @@ def model_section():
                         st.warning("Could not parse input as a table. Please check your input.")
 
             elif input_format == "Word document":
-
                 uploaded_file = st.file_uploader("Upload a Word Document", type="docx")
                 if uploaded_file is not None:
                     captions, tables = extract_tables_from_docx(uploaded_file)
@@ -283,19 +260,12 @@ def model_section():
 
 
 def result_section():
-    # st.markdown('<div class="section-header-black">AutoGen Performance</div>', unsafe_allow_html=True)
     col1, col2 = st.columns([5, 5])
-    # Introduction section
     with col1:
         load_css()
         st.markdown("""
-                    <style>
-                    .column1-content {
-                        background-color: #EEEEEE;
-                    }
-                    </style>
-                    <div class="section-header-grey">AutoGen Performance</div>
-                    <div class="column1-content">
+                    <div class="section-header-grey">T-Gen Performance</div>
+                    <div class="column-content-grey">
                         <img src="https://github.com/MinhongW/text_generation/blob/web-app/imgs/fig_results.png?raw=true" width="850"/>
                     </div>
                     """, unsafe_allow_html=True)
@@ -304,10 +274,9 @@ def result_section():
     with col2:
         # st.image("fig_results02.png",
         #          use_column_width=True)
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
+        st.markdown("""
+                    <br><br><br>
+                    """, unsafe_allow_html=True)
         col_icon, col_text = st.columns([0.5, 9.5])
         with col_icon:
             st.image("icons/icon-evaluation.png", use_column_width=True)
@@ -367,26 +336,35 @@ def main():
                     Hassan Saif, Senior Manager <br>
                     </div>
                 """, unsafe_allow_html=True)
-    #st.write("")
+
     st.markdown("""
-            <br><br><br>
-            """, unsafe_allow_html=True)
-    #st.write("")
-    #st.write("")
-    #st.write("")
-    introduction_and_methodology_section()
+                <br><br>
+                """, unsafe_allow_html=True)
+    introduction_section()
+    st.markdown("""
+                <br><br>
+                """, unsafe_allow_html=True)
     t5_model_section()
+    st.markdown("""
+                <br><br>
+                """, unsafe_allow_html=True)
     model_development_section()
+    st.markdown("""
+                <br><br>
+                """, unsafe_allow_html=True)
     model_section()
+    st.markdown("""
+                <br><br>
+                """, unsafe_allow_html=True)
     result_section()
 
     st.markdown("---")  # Horizontal line
     st.markdown("""
-        Research and Development, Compliance Analytics, HSBC.
-        
-        For more information, please contact Minhong Wang at minhong.wang@hsbc.com.
-        
-        """)
+                Research and Development, Compliance Analytics, HSBC.
+                
+                For more information, please contact Minhong Wang at minhong.wang@hsbc.com.
+                
+                """)
 
 
 if __name__ == "__main__":
